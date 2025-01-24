@@ -6,12 +6,12 @@ export default function Home() {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-8">
         <div className="col-span-8 flex flex-col min-h-screen items-center justify-center">
           <h1
-            className={`text-8xl font-bold ${cardo.className} block text-blue-300`}
+            className={`text-4xl md:text-8xl font-bold ${cardo.className} block text-blue-300`}
           >
-            Reykja und John
+            Reykja &amp; John
           </h1>
           <h2
-            className={`block font-medium text-4xl mt-16 ${nunito.className} text-neutral-600`}
+            className={`block font-medium text-xl md:text-4xl mt-8 md:mt-16 ${nunito.className} text-neutral-600`}
           >
             Wat mut dat mut
           </h2>
