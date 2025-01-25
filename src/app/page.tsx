@@ -1,4 +1,5 @@
 import { cardo, nunito } from "./fonts";
+import CountDown from "@/components/countdown/countdown";
 
 export default function Home() {
   return (
@@ -11,10 +12,13 @@ export default function Home() {
             Reykja &amp; John
           </h1>
           <h2
-            className={`block font-medium text-xl md:text-4xl mt-8 md:mt-16 ${nunito.className} text-neutral-600`}
+            className={`block font-medium text-xl md:text-4xl mt-4 md:mt-12 ${nunito.className} text-neutral-600`}
           >
             Wat mut dat mut
           </h2>
+          <div className="mt-8 md:mt-16">
+            <CountDown />
+          </div>
         </div>
       </div>
     </main>
