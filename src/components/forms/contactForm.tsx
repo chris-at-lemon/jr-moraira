@@ -51,6 +51,7 @@ export default function ContactForm() {
           <input
             {...register("firstName", { required: true })}
             name="firstName"
+            className={`${errors.firstName ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""}`}
           />
         </div>
 
@@ -61,6 +62,7 @@ export default function ContactForm() {
           <input
             {...register("lastName", { required: true })}
             name="lastName"
+            className={`${errors.lastName ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""}`}
           />
         </div>
 
@@ -68,7 +70,11 @@ export default function ContactForm() {
           <div>
             <label htmlFor="email">Email</label>
           </div>
-          <input {...register("email", { required: true })} name="email" />
+          <input
+            {...register("email", { required: true })}
+            name="email"
+            className={`${errors.email ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""}`}
+          />
         </div>
 
         <div className="mt-4">

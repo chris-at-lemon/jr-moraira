@@ -1,5 +1,4 @@
 import { cardo, nunito } from "./fonts";
-import ContactForm from "@/components/forms/contactForm";
 
 export default function Home() {
   return (
