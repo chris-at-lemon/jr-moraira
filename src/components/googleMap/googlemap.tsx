@@ -1,15 +1,9 @@
 import { GoogleMapsEmbed } from "@next/third-parties/google";
 
-type Props = {
-  mapsApiKey: string;
-};
-
-const GoogleMap = ({ mapsApiKey }: Props) => {
-  console.log({ mapsApiKey });
-
+const GoogleMap = () => {
   return (
     <GoogleMapsEmbed
-      apiKey="AIzaSyA4lmbeY7cwpVHbzyqKDQInxbr25CUWK5Y"
+      apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}
       height={400}
       width="100%"
       mode="place"

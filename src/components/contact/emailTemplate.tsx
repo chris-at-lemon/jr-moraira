@@ -1,16 +1,18 @@
 import { Html } from "@react-email/components";
 
 type Props = {
-  firstName: string;
-  lastName: string;
+  fullName: string;
+  partnerFullName: string;
+  children: number;
   email: string;
-  message: string;
   phoneNumber: string;
+  message: string;
 };
 
 const EmailTemplate = ({
-  firstName,
-  lastName,
+  fullName,
+  partnerFullName,
+  children,
   email,
   message,
   phoneNumber,
@@ -19,10 +21,13 @@ const EmailTemplate = ({
     <Html>
       <h1>Ich bin dann mal dabei!</h1>
       <p>
-        <strong>First Name:</strong> {firstName}
+        <strong>Full Name:</strong> {fullName}
       </p>
       <p>
-        <strong>Last Name:</strong> {lastName}
+        <strong>Partner Full Name:</strong> {partnerFullName}
+      </p>
+      <p>
+        <strong>Children:</strong> {children}
       </p>
       <p>
         <strong>Email:</strong> {email}

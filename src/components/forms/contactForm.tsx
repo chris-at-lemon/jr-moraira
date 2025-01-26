@@ -5,8 +5,9 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { nunito } from "@/app/fonts";
 
 type Inputs = {
-  firstName: string;
-  lastName: string;
+  fullName: string;
+  partnerFullName: string;
+  children: number;
   email: string;
   phoneNumber: string;
   message: string;
@@ -42,27 +43,39 @@ export default function ContactForm() {
   };
 
   return (
-    <div className={`${nunito.className} flex flex-col items-center p-8`}>
-      <form onSubmit={handleSubmit(onSubmit)} className="your-form-styles">
+    <div className={`${nunito.className} flex flex-col items-center`}>
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full">
         <div>
           <div>
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="fullName">Full Name</label>
           </div>
           <input
-            {...register("firstName", { required: true })}
-            name="firstName"
-            className={`${errors.firstName ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""}`}
+            {...register("fullName", { required: true })}
+            name="fullName"
+            className={`${errors.fullName ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""} w-full`}
           />
         </div>
 
         <div className="mt-4">
           <div>
-            <label htmlFor="lastName">Last Name</label>
+            <label htmlFor="partnerFullName">Partner Full Name</label>
           </div>
           <input
-            {...register("lastName", { required: true })}
-            name="lastName"
-            className={`${errors.lastName ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""}`}
+            {...register("partnerFullName")}
+            name="partnerFullName"
+            className={`w-full`}
+          />
+        </div>
+
+        <div className="mt-4">
+          <div>
+            <label htmlFor="children">Number of children</label>
+          </div>
+          <input
+            {...register("children")}
+            name="children"
+            className={`w-full`}
+            type="number"
           />
         </div>
 
@@ -73,7 +86,7 @@ export default function ContactForm() {
           <input
             {...register("email", { required: true })}
             name="email"
-            className={`${errors.email ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""}`}
+            className={`${errors.email ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""} w-full`}
           />
         </div>
 
@@ -81,19 +94,27 @@ export default function ContactForm() {
           <div>
             <label htmlFor="phone">Phone</label>
           </div>
-          <input {...register("phoneNumber")} name="phoneNumber" />
+          <input
+            {...register("phoneNumber", { required: true })}
+            name="phoneNumber"
+            className={`${errors.phoneNumber ? "border-red-500 focus:border-red-500 focus:ring-red-500" : ""} w-full`}
+          />
         </div>
 
         <div className="mt-4">
           <div>
             <label htmlFor="message">Message</label>
           </div>
-          <textarea {...register("message")} name="message" />
+          <textarea
+            {...register("message")}
+            name="message"
+            className="w-full"
+          />
         </div>
         <div className="mt-4">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
           >
             Send message
           </button>

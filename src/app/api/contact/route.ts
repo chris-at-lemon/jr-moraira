@@ -8,19 +8,20 @@ import { render } from "@react-email/render";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
-  const { firstName, lastName, email, message, phoneNumber } =
+  const { fullName, partnerFullName, children, email, message, phoneNumber } =
     await request.json();
 
   try {
     // Render the email HTML
     const emailHtml = await render(
       React.createElement(EmailTemplate, {
-        firstName,
-        lastName,
+        fullName,
+        partnerFullName,
+        children,
         email,
         message,
         phoneNumber,
-      })
+      }),
     );
 
     console.log({ emailHtml });
@@ -30,8 +31,8 @@ export async function POST(request: NextRequest) {
       from: "JR Moraira <jr@jr-moraira.com>",
       // to: "john.korter@gmail.com",
       // cc: "reykja80@yahoo.de",
-      to: "cherrmann@lemon-digital.com",
-      subject: `RSVP von ${firstName} ${lastName}`,
+      to: "chris.herrmann.2012@gmail.com",
+      subject: `RSVP von ${fullName}`,
       html: emailHtml,
     });
 
@@ -44,7 +45,7 @@ export async function POST(request: NextRequest) {
       JSON.stringify({ success: false, error: errorMessage }),
       {
         status: 500,
-      }
+      },
     );
   }
 }
