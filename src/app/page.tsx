@@ -2,12 +2,15 @@ import Image from "next/image";
 
 import { cardo, nunito } from "./fonts";
 import CountDown from "@/components/countdown/countdown";
+import GoogleMap from "@/components/googleMap/googlemap";
+
+const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY as string;
 
 export default function Home() {
   return (
     <main className="bg-orange-50 text-neutral-900">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-8">
-        <div className="absolute left-0 top-0 col-span-8 h-screen w-screen opacity-15">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-8">
+        <div className="absolute left-0 top-0 col-span-8 h-screen w-full opacity-15">
           <Image
             src="https://ik.imagekit.io/vcqe1lhbs/jr-moraira/1255d68d-0c7e-4fb8-9bc6-8804c788fbcb_XjTaFcuhx.JPG?updatedAt=1737816995082"
             layout="fill"
@@ -32,6 +35,9 @@ export default function Home() {
             <CountDown />
           </div>
         </div>
+      </div>
+      <div className="col-span-8 grayscale">
+        <GoogleMap mapsApiKey={mapsApiKey} />
       </div>
     </main>
   );
