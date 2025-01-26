@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useLanguageContext } from "@/context/languageContext";
 
 import { nunito } from "@/app/fonts";
 
@@ -22,6 +23,7 @@ type Props = {
 };
 
 export default function ContactForm({ setIsOpen }: Props) {
+  const { language } = useLanguageContext();
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -72,7 +74,9 @@ export default function ContactForm({ setIsOpen }: Props) {
               htmlFor="fullName"
               className={`${errors.fullName ? "text-red-500" : "text-neutral-900"}`}
             >
-              Full Name
+              {language === "en" && "Full Name"}
+              {language === "fr" && "Nom complet"}
+              {language === "de" && "Vollständiger Name"}
             </label>
           </div>
           <input
@@ -84,7 +88,11 @@ export default function ContactForm({ setIsOpen }: Props) {
 
         <div className="mt-4">
           <div>
-            <label htmlFor="partnerFullName">Partner Full Name</label>
+            <label htmlFor="partnerFullName">
+              {language === "en" && "Partner Full Name"}
+              {language === "fr" && "Nom complet du partenaire"}
+              {language === "de" && "Vollständiger Name des Partners"}
+            </label>
           </div>
           <input
             {...register("partnerFullName")}
@@ -95,7 +103,11 @@ export default function ContactForm({ setIsOpen }: Props) {
 
         <div className="mt-4">
           <div>
-            <label htmlFor="childrenNumber">Number of children</label>
+            <label htmlFor="childrenNumber">
+              {language === "en" && "Number of children"}
+              {language === "fr" && "Nombre d'enfants"}
+              {language === "de" && "Anzahl der Kinder"}
+            </label>
           </div>
           <input
             {...register("childrenNumber")}
@@ -111,7 +123,9 @@ export default function ContactForm({ setIsOpen }: Props) {
               htmlFor="email"
               className={`${errors.email ? "text-red-500" : "text-neutral-900"}`}
             >
-              Email
+              {language === "en" && "Email"}
+              {language === "fr" && "Email"}
+              {language === "de" && "E-Mail"}
             </label>
           </div>
           <input
@@ -127,7 +141,9 @@ export default function ContactForm({ setIsOpen }: Props) {
               htmlFor="phone"
               className={`${errors.phoneNumber ? "text-red-500" : "text-neutral-900"}`}
             >
-              Phone
+              {language === "en" && "Phone"}
+              {language === "fr" && "Téléphone"}
+              {language === "de" && "Telefon"}
             </label>
           </div>
           <input
@@ -139,7 +155,11 @@ export default function ContactForm({ setIsOpen }: Props) {
 
         <div className="mt-4">
           <div>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">
+              {language === "en" && "Message"}
+              {language === "fr" && "Message"}
+              {language === "de" && "Nachricht"}
+            </label>
           </div>
           <textarea
             {...register("message")}
@@ -164,9 +184,18 @@ export default function ContactForm({ setIsOpen }: Props) {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-bold">Message delivered successfully!</p>
+                  <p className="font-bold">
+                    {language === "en" && "Message delivered successfully!"}
+                    {language === "fr" && "Message livré avec succès!"}
+                    {language === "de" && "Nachricht erfolgreich zugestellt!"}
+                  </p>
                   <p className="text-sm">
-                    Thank you for your message. We will get back to you soon.
+                    {language === "en" &&
+                      "Thank you for your message. We will get back to you soon."}
+                    {language === "fr" &&
+                      "Merci pour votre message. Nous vous répondrons bientôt."}
+                    {language === "de" &&
+                      "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden."}
                   </p>
                 </div>
               </div>
@@ -179,7 +208,9 @@ export default function ContactForm({ setIsOpen }: Props) {
               type="submit"
               className="flex items-center justify-center rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
             >
-              Send message
+              {language === "en" && "Send message"}
+              {language === "fr" && "Envoyer le message"}
+              {language === "de" && "Nachricht senden"}
               <div className="flex h-6 w-6 items-center justify-center">
                 {submitting ? (
                   <FontAwesomeIcon icon={faSpinner} className="animate-spin" />

@@ -1,9 +1,10 @@
 import Image from "next/image";
 
-import { cardo, nunito } from "./fonts";
+import LanguageToggle from "@/components/languageToggle/languageToggle";
 import CountDown from "@/components/countdown/countdown";
 import GoogleMap from "@/components/googleMap/googlemap";
 import ContactFormWrapper from "@/components/forms/contactFormWrapper";
+import MainHeaders from "@/components/text/mainHeaders";
 
 export default function Home() {
   return (
@@ -20,18 +21,9 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="col-span-8 flex min-h-screen flex-col items-center justify-center space-y-96 md:space-y-24">
+          <div className="col-span-8 flex min-h-screen flex-col items-center justify-center space-y-96 md:space-y-44">
             <div>
-              <h1
-                className={`text-4xl font-bold md:text-8xl ${cardo.className} text-center text-blue-300`}
-              >
-                Reykja &amp; John
-              </h1>
-              <h2
-                className={`block text-xl font-medium md:mt-12 md:text-4xl ${nunito.className} text-center text-neutral-600`}
-              >
-                Wat mut dat mut
-              </h2>
+              <MainHeaders />
             </div>
             <div className="mt-8 md:mt-16">
               <CountDown />
@@ -43,6 +35,7 @@ export default function Home() {
         </div>
       </main>
       <ContactFormWrapper />
+      <LanguageToggle />
     </>
   );
 }
