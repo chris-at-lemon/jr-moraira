@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: "Reykja un John",
+  title: "Reykja und John",
   description: "Hochzeit in Moraira",
 };
 
