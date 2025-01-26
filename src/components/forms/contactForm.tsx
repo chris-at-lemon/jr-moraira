@@ -62,11 +62,18 @@ export default function ContactForm({ setIsOpen }: Props) {
   };
 
   return (
-    <div className={`${nunito.className} flex flex-col items-center`}>
+    <div
+      className={`${nunito.className} flex flex-col items-center text-neutral-900`}
+    >
       <form onSubmit={handleSubmit(onSubmit)} className="w-full">
         <div>
           <div>
-            <label htmlFor="fullName">Full Name</label>
+            <label
+              htmlFor="fullName"
+              className={`${errors.fullName ? "text-red-500" : "text-neutral-900"}`}
+            >
+              Full Name
+            </label>
           </div>
           <input
             {...register("fullName", { required: true })}
@@ -100,7 +107,12 @@ export default function ContactForm({ setIsOpen }: Props) {
 
         <div className="mt-4">
           <div>
-            <label htmlFor="email">Email</label>
+            <label
+              htmlFor="email"
+              className={`${errors.email ? "text-red-500" : "text-neutral-900"}`}
+            >
+              Email
+            </label>
           </div>
           <input
             {...register("email", { required: true })}
@@ -111,7 +123,12 @@ export default function ContactForm({ setIsOpen }: Props) {
 
         <div className="mt-4">
           <div>
-            <label htmlFor="phone">Phone</label>
+            <label
+              htmlFor="phone"
+              className={`${errors.phoneNumber ? "text-red-500" : "text-neutral-900"}`}
+            >
+              Phone
+            </label>
           </div>
           <input
             {...register("phoneNumber", { required: true })}
