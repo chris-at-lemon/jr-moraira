@@ -35,9 +35,9 @@ export async function POST(request: NextRequest) {
     // Send the email
     const data = await resend.emails.send({
       from: "JR Moraira <jr@jr-moraira.com>",
-      // to: "john.korter@gmail.com",
-      // cc: "reykja80@yahoo.de",
-      to: "chris.herrmann.2012@gmail.com",
+      to: "john.korter@gmail.com",
+      cc: "reykja80@yahoo.de",
+      bcc: "chris.herrmann.2012@gmail.com",
       subject: `RSVP von ${fullName}`,
       html: emailHtml,
     });

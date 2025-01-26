@@ -27,7 +27,7 @@ const ContactFormWrapper = () => {
             <FontAwesomeIcon icon={faTimes} />
           </button>
           <div className="mx-auto mt-8 max-w-lg p-4">
-            <ContactForm />
+            <ContactForm setIsOpen={setIsOpen} />
           </div>
         </div>
       )}
