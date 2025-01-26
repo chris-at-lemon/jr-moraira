@@ -5,9 +5,11 @@ type Props = {
 };
 
 const GoogleMap = ({ mapsApiKey }: Props) => {
+  console.log({ mapsApiKey });
+
   return (
     <GoogleMapsEmbed
-      apiKey={mapsApiKey}
+      apiKey="AIzaSyA4lmbeY7cwpVHbzyqKDQInxbr25CUWK5Y"
       height={400}
       width="100%"
       mode="place"
