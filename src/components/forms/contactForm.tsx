@@ -7,7 +7,7 @@ import { nunito } from "@/app/fonts";
 type Inputs = {
   fullName: string;
   partnerFullName: string;
-  children: number;
+  childrenNumber: number;
   email: string;
   phoneNumber: string;
   message: string;
@@ -69,11 +69,11 @@ export default function ContactForm() {
 
         <div className="mt-4">
           <div>
-            <label htmlFor="children">Number of children</label>
+            <label htmlFor="childrenNumber">Number of children</label>
           </div>
           <input
-            {...register("children")}
-            name="children"
+            {...register("childrenNumber")}
+            name="childrenNumber"
             className={`w-full`}
             type="number"
           />

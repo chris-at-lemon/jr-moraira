@@ -3,7 +3,7 @@ import { Html } from "@react-email/components";
 type Props = {
   fullName: string;
   partnerFullName: string;
-  children: number;
+  childrenNumber: number;
   email: string;
   phoneNumber: string;
   message: string;
@@ -12,7 +12,7 @@ type Props = {
 const EmailTemplate = ({
   fullName,
   partnerFullName,
-  children,
+  childrenNumber,
   email,
   message,
   phoneNumber,
@@ -27,7 +27,7 @@ const EmailTemplate = ({
         <strong>Partner Full Name:</strong> {partnerFullName}
       </p>
       <p>
-        <strong>Children:</strong> {children}
+        <strong>Children:</strong> {childrenNumber}
       </p>
       <p>
         <strong>Email:</strong> {email}

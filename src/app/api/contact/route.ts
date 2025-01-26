@@ -8,8 +8,14 @@ import { render } from "@react-email/render";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
-  const { fullName, partnerFullName, children, email, message, phoneNumber } =
-    await request.json();
+  const {
+    fullName,
+    partnerFullName,
+    childrenNumber,
+    email,
+    message,
+    phoneNumber,
+  } = await request.json();
 
   try {
     // Render the email HTML
@@ -17,7 +23,7 @@ export async function POST(request: NextRequest) {
       React.createElement(EmailTemplate, {
         fullName,
         partnerFullName,
-        children,
+        childrenNumber,
         email,
         message,
         phoneNumber,
