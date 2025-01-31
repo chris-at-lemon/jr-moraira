@@ -55,7 +55,7 @@ const CountDown = () => {
               {hours}
             </div>
             <div
-              className={`${nunito.className} -mt-1 text-sm text-neutral-500 md:text-lg`}
+              className={`${nunito.className} -mt-1 text-sm text-neutral-600 md:text-lg`}
             >
               {language === "en" && "hours"}
               {language === "fr" && "heures"}

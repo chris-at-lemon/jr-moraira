@@ -7,7 +7,7 @@ const GoogleMap = () => {
       height={400}
       width="100%"
       mode="place"
-      q={`place_id:ChIJ-Wg3UsgHnhIR9o_O1EUJEiY`}
+      q={`place_id:ChIJZW_8E1oHnhIRNzYOw3AX8yE`}
     />
   );
 };

@@ -8,6 +8,7 @@ import MainHeaders from "@/components/text/mainHeaders";
 import HeaderSeparator from "@/components/contentSection/headerSeparator";
 import ImagesAndTextWrapper from "@/components/contentSection/imagesAndTextWrapper";
 import Gallery from "@/components/imageGallery/gallery";
+import DateToCountTo from "@/components/countdown/dateToCountTo";
 
 export default function Home() {
   return (
@@ -28,23 +29,34 @@ export default function Home() {
             <div>
               <MainHeaders />
             </div>
-            <div className="mt-8 md:mt-16">
-              <CountDown />
+            <div className="mt-8 text-center md:mt-16">
+              <DateToCountTo />
+              <div className="mt-4">
+                <CountDown />
+              </div>
             </div>
           </div>
         </div>
 
         <div className="container mx-auto">
-          <HeaderSeparator section="crazies" />
+          <HeaderSeparator section="crazies" quotes={true} />
         </div>
         <div className="container mx-auto">
           <ImagesAndTextWrapper section="crazies" />
         </div>
         <div className="container mx-auto">
-          <HeaderSeparator section="probezeit" />
+          <HeaderSeparator section="probezeit" quotes={true} />
         </div>
         <div className="container mx-auto">
           <Gallery />
+        </div>
+
+        <div className="container mx-auto">
+          <HeaderSeparator section="trauung" quotes={false} />
+        </div>
+
+        <div className="container mx-auto">
+          <ImagesAndTextWrapper section="trauung" />
         </div>
 
         <div className="col-span-8 mt-16 grayscale">

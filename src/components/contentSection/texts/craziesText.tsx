@@ -1,6 +1,10 @@
 import { nunito } from "@/app/fonts";
 
-export const craziesText = (language: string) => {
+type Props = {
+  language: "en" | "fr" | "de";
+};
+
+const CraziesText = ({ language }: Props) => {
   if (language === "de") {
     return (
       <div className={`${nunito}`}>
@@ -74,3 +78,5 @@ export const craziesText = (language: string) => {
     );
   }
 };
+
+export default CraziesText;
