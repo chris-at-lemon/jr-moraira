@@ -10,7 +10,7 @@ type Props = {
   language: "en" | "fr" | "de";
 };
 
-const TrauungText = ({ language }: Props) => {
+const LocationText = ({ language }: Props) => {
   if (language === "de") {
     return (
       <div className={`${nunito} flex flex-col items-center md:block`}>
@@ -29,7 +29,7 @@ const TrauungText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">Ab 15:30 Uhr</div>
+            <div className="ml-4 mt-[1px]">Ab 19:30 Uhr</div>
           </div>
         </div>
 
@@ -37,9 +37,10 @@ const TrauungText = ({ language }: Props) => {
         <hr className="mt-2 h-0.5 w-48 bg-blue-400" />
 
         <div className="mt-8">
-          <div className="font-semibold">Castillo de Moraira</div>
-          <div> C. Castillo</div>
-          <div>03724 Moraira</div>
+          <div className="font-semibold">Oceana</div>
+          <div>Avenida La Marina n°333</div>
+          <div>Les Basetes,</div>
+          <div>03720 Benissa </div>
           <div>Alicante</div>
           <div className="mt-4 text-2xl">
             <FontAwesomeIcon
@@ -70,7 +71,7 @@ const TrauungText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">À partir de 15h30</div>
+            <div className="ml-4 mt-[1px]">À partir de 19h30</div>
           </div>
         </div>
 
@@ -78,10 +79,10 @@ const TrauungText = ({ language }: Props) => {
         <hr className="mt-2 h-0.5 w-48 bg-blue-400" />
 
         <div className="mt-8">
-          <div className="font-semibold">Castillo de Moraira</div>
-          <div> C. Castillo</div>
-          <div>03724 Moraira</div>
-          <div>Alicante</div>
+          <div className="font-semibold">Oceana</div>
+          <div>Avenida La Marina n°333</div>
+          <div>Les Basetes,</div>
+          <div>03720 Benissa </div>
           <div className="mt-4 text-2xl">
             <FontAwesomeIcon
               icon={faArrowAltCircleDown}
@@ -111,7 +112,7 @@ const TrauungText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">From 3:30 pm</div>
+            <div className="ml-4 mt-[1px]">From 7:30 pm</div>
           </div>
         </div>
 
@@ -119,10 +120,10 @@ const TrauungText = ({ language }: Props) => {
         <hr className="mt-2 h-0.5 w-48 bg-blue-400" />
 
         <div className="mt-8">
-          <div className="font-semibold">Castillo de Moraira</div>
-          <div> C. Castillo</div>
-          <div>03724 Moraira</div>
-          <div>Alicante</div>
+          <div className="font-semibold">Oceana</div>
+          <div>Avenida La Marina n°333</div>
+          <div>Les Basetes,</div>
+          <div>03720 Benissa </div>
           <div className="mt-4 text-2xl">
             <FontAwesomeIcon
               icon={faArrowAltCircleDown}
@@ -135,4 +136,4 @@ const TrauungText = ({ language }: Props) => {
   }
 };
 
-export default TrauungText;
+export default LocationText;

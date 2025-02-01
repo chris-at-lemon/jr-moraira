@@ -7,6 +7,7 @@ import { useLanguageContext } from "@/context/languageContext";
 
 const CraziesText = dynamic(() => import("./texts/craziesText"));
 const TrauungText = dynamic(() => import("./texts/trauungText"));
+const LocationText = dynamic(() => import("./texts/locationText"));
 
 type Props = {
   section: string;
@@ -27,6 +28,12 @@ const ImagesAndTextWrapper = ({ section }: Props) => {
     text = <TrauungText language={language} />;
     image =
       "https://ik.imagekit.io/vcqe1lhbs/jr-moraira/castillo-moraira_Od2WtqPqV.jpg?updatedAt=1738352781038";
+  }
+
+  if (section === "location") {
+    text = <LocationText language={language} />;
+    image =
+      "https://ik.imagekit.io/vcqe1lhbs/jr-moraira/oceana@0.25x_ydorQfclhD.jpg?updatedAt=1738413220975";
   }
 
   return (

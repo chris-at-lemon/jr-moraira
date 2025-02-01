@@ -9,11 +9,13 @@ import HeaderSeparator from "@/components/contentSection/headerSeparator";
 import ImagesAndTextWrapper from "@/components/contentSection/imagesAndTextWrapper";
 import Gallery from "@/components/imageGallery/gallery";
 import DateToCountTo from "@/components/countdown/dateToCountTo";
+import Tagesablauf from "@/components/tagesablauf/tagesablauf";
+import { Accordion } from "@/components/accordeon/accordion";
 
 export default function Home() {
   return (
     <>
-      <main className="text-neutral-900">
+      <main className="bg-orange-50 bg-opacity-10 text-neutral-900">
         <div className="grid h-screen grid-cols-1 gap-4 bg-orange-50 md:grid-cols-8">
           <div className="absolute left-0 top-0 col-span-8 h-screen w-full opacity-15">
             <Image
@@ -60,7 +62,31 @@ export default function Home() {
         </div>
 
         <div className="col-span-8 mt-16 grayscale">
-          <GoogleMap />
+          <GoogleMap placeId={"ChIJ-Wg3UsgHnhIR9o_O1EUJEiY"} />
+        </div>
+
+        <div className="container mx-auto">
+          <HeaderSeparator section="tagesablauf" quotes={false} />
+        </div>
+
+        <div className="container mx-auto">
+          <Tagesablauf />
+        </div>
+
+        <div className="container mx-auto">
+          <HeaderSeparator section="location" quotes={false} />
+        </div>
+        <div className="container mx-auto">
+          <ImagesAndTextWrapper section="location" />
+        </div>
+        <div className="col-span-8 mt-16 grayscale">
+          <GoogleMap placeId={"ChIJZW_8E1oHnhIRNzYOw3AX8yE"} />
+        </div>
+
+        <div className="bg-orange-900 bg-opacity-15 px-4 py-16 md:px-0">
+          <div className="container mx-auto">
+            <Accordion />
+          </div>
         </div>
       </main>
       <ContactFormWrapper />

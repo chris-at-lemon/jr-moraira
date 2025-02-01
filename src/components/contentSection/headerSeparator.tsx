@@ -47,6 +47,24 @@ const HeaderSeparator = ({ section, quotes }: Props) => {
               ? "Die Trauung"
               : null)}
 
+      {section === "tagesablauf" &&
+        (language === "en"
+          ? "The day's program"
+          : language === "fr"
+            ? "Le programme de la journée"
+            : language === "de"
+              ? "Der Tagesablauf"
+              : null)}
+
+      {section === "location" &&
+        (language === "en"
+          ? "Location"
+          : language === "fr"
+            ? "Emplacement"
+            : language === "de"
+              ? "Location"
+              : null)}
+
       {quotes && <FontAwesomeIcon icon={faQuoteRight} className="ml-4 mt-4" />}
     </div>
   );
