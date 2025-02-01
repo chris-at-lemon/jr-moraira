@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <>
       <main className="bg-orange-50 bg-opacity-10 text-neutral-900">
-        <div className="grid h-screen grid-cols-1 gap-4 bg-orange-50 md:grid-cols-8">
-          <div className="absolute left-0 top-0 col-span-8 h-screen w-full opacity-15">
+        <div className="grid h-screen min-h-[640px] grid-cols-1 gap-4 bg-orange-50 md:grid-cols-8">
+          <div className="absolute left-0 top-0 col-span-8 h-screen min-h-[640px] w-full opacity-15">
             <Image
               src="https://ik.imagekit.io/vcqe1lhbs/jr-moraira/1255d68d-0c7e-4fb8-9bc6-8804c788fbcb_XjTaFcuhx.JPG?updatedAt=1737816995082"
               fill
