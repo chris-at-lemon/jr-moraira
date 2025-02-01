@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+
 import { nunito } from "@/app/fonts";
 
 import { useLanguageContext } from "@/context/languageContext";
@@ -16,12 +18,62 @@ export const Accordion = () => {
   const DataGerman = [
     {
       title: "Wie ist der Dresscode?",
-      content: `Um den festlichen Anlass gebührend zu zelebrieren, haben wir uns für den Dresscode "Sommerlich elegant mit Tanzschuhen" entschieden. Wir lieben den sommerlichen Flair und wünschen uns, dass ihr euch in luftig-leichten und eleganten Outfits wohl fühlt. Für den Abend würden wir euch zusätzlich ein Jäckchen empfehlen. Bitte checkt den Wetterbericht vor Abflug!`,
+      content: (
+        <p>
+          Um den festlichen Anlass gebührend zu zelebrieren, haben wir uns für
+          den Dresscode{" "}
+          <strong>&quot;Sommerlich elegant mit Tanzschuhen&quot;</strong>{" "}
+          entschieden. Wir lieben den sommerlichen Flair und wünschen uns, dass
+          ihr euch in luftig-leichten und eleganten Outfits wohl fühlt.{" "}
+          <strong>
+            Für den Abend würden wir euch zusätzlich ein Jäckchen empfehlen.
+            Bitte checkt den Wetterbericht vor Abflug!
+          </strong>
+        </p>
+      ),
     },
     {
       title: "Gibt es eine Unterkunft vor Ort?",
-      content:
-        "Damit Ihr Euch auf Eure individuellen Bedürfnisse und Vorlieben einstellen könnt, möchten wir Euch bitten, Euch eigenständig um Eure Unterkunft zu kümmern. Bitte denkt daran, frühzeitig eure Unterkunft zu buchen, da die Nachfrage in Moraira besonders hoch sein kann",
+      content: (
+        <>
+          <p>
+            Damit Ihr Euch auf Eure individuellen Bedürfnisse und Vorlieben
+            einstellen könnt, möchten wir Euch bitten, Euch eigenständig um Eure
+            Unterkunft zu kümmern. Bitte denkt daran,{" "}
+            <strong>frühzeitig eure Unterkunft zu buchen</strong>, da die
+            Nachfrage in Moraira besonders hoch sein kann
+          </p>
+          <p className="mt-2">
+            Für den Aufenthalt bietet Moraira verschiedene Möglichkeiten, hier
+            nur ein paar Ideen oder Anregungen:{" "}
+          </p>
+          <p className="mt-2">
+            <strong>Hotels: </strong>
+            <Link
+              href="https://www.ritualdeterra.com/moraira-hotel/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Hotel Ritual de Terra
+            </Link>
+          </p>
+          <p>
+            <strong>Appartements: </strong>
+            <Link
+              href="https://www.costa-blanca-ferien.de/moraira.html"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Costa Blanca Ferien
+            </Link>
+          </p>
+          <p className="mt-2">
+            Auch in Moraira und Umgebung gibt es sonst Airbnb.
+          </p>
+        </>
+      ),
     },
     {
       title: "Welcher Flughafen ist für die Anreise geeignet? ",
@@ -30,8 +82,30 @@ export const Accordion = () => {
     },
     {
       title: "Wo kann ich einen Mietwagen mieten? ",
-      content:
-        "Ebenfalls könnt Ihr an beiden Flughäfen direkt einen Mietwagen für die Weiterreise buchen. ",
+      content: (
+        <>
+          {" "}
+          <p>
+            Ebenfalls könnt Ihr an beiden Flughäfen direkt einen Mietwagen für
+            die Weiterreise buchen.
+          </p>
+          <p className="mt-2">
+            Eine Empfehlung von uns, welche Website ganz gut ist:{" "}
+            <Link
+              href="https://www.doyouspain.com/index.htm"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Spain Car Hire
+            </Link>
+          </p>
+          <p className="mt-2">
+            Bitte schaut Euch aber sehr genau die Bewertungen an und behaltet
+            immer im Hinterkopf, dass günstig nicht immer gleich günstig ist!
+          </p>
+        </>
+      ),
     },
     {
       title: "Was können wir Euch schenken? ",
@@ -52,12 +126,60 @@ export const Accordion = () => {
   const DataEnglish = [
     {
       title: "What is the dress code?",
-      content: `To celebrate the festive occasion appropriately, we have decided on the dress code "Summer elegant with dance shoes". We love the summer flair and hope you feel comfortable in light and elegant outfits. For the evening we would recommend a jacket. Please check the weather report before departure!`,
+      content: (
+        <p>
+          To celebrate the festive occasion, we have decided on the dress code{" "}
+          <strong>&quot;Summer elegant with dance shoes&quot;</strong>. We love
+          the summer flair and hope that you feel comfortable in light and
+          elegant outfits.{" "}
+          <strong>
+            For the evening, we would also recommend a jacket. Please check the
+            weather report before departure!
+          </strong>
+        </p>
+      ),
     },
     {
       title: "Is there accommodation on site?",
-      content:
-        "To allow you to adjust to your individual needs and preferences, we ask you to take care of your accommodation independently. Please remember to book your accommodation early, as demand in Moraira can be particularly high.",
+      content: (
+        <>
+          <p>
+            So that you can adapt to your individual needs and preferences, we
+            ask you to take care of your accommodation independently. Please
+            remember to <strong>book your accommodation early</strong>, as
+            demand in Moraira can be particularly high
+          </p>
+          <p className="mt-2">
+            For your stay, Moraira offers various options, here are just a few
+            ideas or suggestions:{" "}
+          </p>
+          <p className="mt-2">
+            <strong>Hotels: </strong>
+            <Link
+              href="https://www.ritualdeterra.com/moraira-hotel/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Hotel Ritual de Terra
+            </Link>
+          </p>
+          <p>
+            <strong>Apartments: </strong>
+            <Link
+              href="https://www.costa-blanca-ferien.de/moraira.html"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Costa Blanca Ferien
+            </Link>
+          </p>
+          <p className="mt-2">
+            There is also Airbnb in Moraira and the surrounding area.
+          </p>
+        </>
+      ),
     },
     {
       title: "Which airport is suitable for arrival?",
@@ -65,9 +187,31 @@ export const Accordion = () => {
         "Whether Alicante or Valencia, both airports offer convenient and uncomplicated arrival options.",
     },
     {
-      title: "Where can I rent a car?",
-      content:
-        "You can also book a rental car for the onward journey directly at both airports.",
+      title: "Where can I rent a car? ",
+      content: (
+        <>
+          {" "}
+          <p>
+            You can also book a rental car for the onward journey directly at
+            both airports.
+          </p>
+          <p className="mt-2">
+            A recommendation from us, which website is quite good:{" "}
+            <Link
+              href="https://www.doyouspain.com/index.htm"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Spain Car Hire
+            </Link>
+          </p>
+          <p className="mt-2">
+            But please look very closely at the reviews and always keep in mind
+            that cheap is not always cheap!
+          </p>
+        </>
+      ),
     },
     {
       title: "What can we give you as a gift?",
@@ -75,25 +219,77 @@ export const Accordion = () => {
         "We are delighted that you will be attending our wedding – your presence is the most beautiful gift you can give us!",
     },
     {
-      title: "Who do I contact regarding the wedding organization?",
+      title: "Who do I contact regarding wedding organization?",
       content: "Schaun mer mal",
     },
     {
       title: "How can I communicate my acceptance or rejection?",
       content:
-        "Please use the above-mentioned option to confirm or cancel. We would be delighted if you could give us feedback by 01.08.2025 at the latest.",
+        "Please use the above-mentioned option for registration or cancellation. We would be delighted if you could give us feedback by 01.08.2025 at the latest.",
     },
   ];
 
   const DataFrench = [
     {
       title: "Quel est le code vestimentaire?",
-      content: `Pour célébrer l'occasion festive de manière appropriée, nous avons opté pour le code vestimentaire "Élégant d'été avec chaussures de danse". Nous adorons l'ambiance estivale et espérons que vous vous sentirez à l'aise dans des tenues légères et élégantes. Pour la soirée, nous vous recommandons une veste. Veuillez consulter le bulletin météo avant le départ!`,
+      content: (
+        <p>
+          Pour célébrer l&apos;occasion festive, nous avons décidé du code
+          vestimentaire{" "}
+          <strong>
+            &quot;Élégant d&apos;été avec chaussures de danse&quot;
+          </strong>
+          . Nous aimons l&apos;ambiance estivale et espérons que vous vous
+          sentirez à l&apos;aise dans des tenues légères et élégantes.{" "}
+          <strong>
+            Pour le soir, nous recommandons également une veste. Veuillez
+            consulter le bulletin météo avant le départ!
+          </strong>
+        </p>
+      ),
     },
     {
       title: "Y a-t-il un hébergement sur place?",
-      content:
-        "Pour vous permettre de vous adapter à vos besoins et préférences individuels, nous vous demandons de vous occuper de votre hébergement de manière indépendante. Veuillez penser à réserver votre hébergement tôt, car la demande à Moraira peut être particulièrement élevée.",
+      content: (
+        <>
+          <p>
+            Afin que vous puissiez vous adapter à vos besoins et préférences
+            individuels, nous vous demandons de vous occuper de votre
+            hébergement de manière indépendante. Veuillez penser à{" "}
+            <strong>réserver votre hébergement tôt</strong>, car la demande à
+            Moraira peut être particulièrement élevée{" "}
+          </p>
+          <p className="mt-2">
+            Pour votre séjour, Moraira offre diverses options, voici quelques
+            idées ou suggestions:{" "}
+          </p>
+          <p className="mt-2">
+            <strong>Hôtels: </strong>
+            <Link
+              href="https://www.ritualdeterra.com/moraira-hotel/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Hotel Ritual de Terra
+            </Link>
+          </p>
+          <p>
+            <strong>Appartements: </strong>
+            <Link
+              href="https://www.costa-blanca-ferien.de/moraira.html"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Costa Blanca Ferien
+            </Link>
+          </p>
+          <p className="mt-2">
+            Il y a aussi Airbnb à Moraira et dans les environs.
+          </p>
+        </>
+      ),
     },
     {
       title: "Quel aéroport est adapté pour l'arrivée?",
@@ -101,9 +297,31 @@ export const Accordion = () => {
         "Que ce soit Alicante ou Valence, les deux aéroports offrent des options d'arrivée pratiques et simples.",
     },
     {
-      title: "Où puis-je louer une voiture?",
-      content:
-        "Vous pouvez également réserver une voiture de location pour le trajet aller directement dans les deux aéroports.",
+      title: "Où puis-je louer une voiture? ",
+      content: (
+        <>
+          {" "}
+          <p>
+            Vous pouvez également réserver une voiture de location pour le
+            trajet directement dans les deux aéroports.
+          </p>
+          <p className="mt-2">
+            Une recommandation de notre part, quel site Web est assez bon:{" "}
+            <Link
+              href="https://www.doyouspain.com/index.htm"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:no-underline"
+            >
+              Spain Car Hire
+            </Link>
+          </p>
+          <p className="mt-2">
+            Mais veuillez regarder de très près les avis et gardez toujours à
+            l&apos;esprit que pas cher n&apos;est pas toujours bon marché!
+          </p>
+        </>
+      ),
     },
     {
       title: "Que pouvons-nous vous offrir comme cadeau?",
@@ -117,7 +335,7 @@ export const Accordion = () => {
     {
       title: "Comment puis-je communiquer mon acceptation ou mon refus?",
       content:
-        "Veuillez utiliser l'option mentionnée ci-dessus pour confirmer ou annuler. Nous serions ravis si vous pouviez nous donner votre avis au plus tard le 01.08.2025.",
+        "Veuillez utiliser l'option de réservation ou d'annulation mentionnée ci-dessus. Nous serions ravis si vous pouviez nous donner votre avis au plus tard le 01.08.2025.",
     },
   ];
 

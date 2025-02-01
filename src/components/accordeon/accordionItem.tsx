@@ -29,7 +29,7 @@ export const AccordionItem = ({
           <FontAwesomeIcon icon={faChevronDown} className="ml-2" />
         )}
       </div>
-      {open && <p className="pt-4">{children}</p>}
+      {open && <div className="pt-4">{children}</div>}
     </article>
   );
 };
