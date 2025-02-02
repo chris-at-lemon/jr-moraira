@@ -13,7 +13,7 @@ type Props = {
 const TrauungText = ({ language }: Props) => {
   if (language === "de") {
     return (
-      <div className={`${nunito} flex flex-col items-center md:block`}>
+      <div className={`${nunito} flex flex-col items-center lg:block`}>
         <div className="text-2xl font-bold">Wann?</div>
         <hr className="mt-2 h-0.5 w-48 bg-blue-400" />
 

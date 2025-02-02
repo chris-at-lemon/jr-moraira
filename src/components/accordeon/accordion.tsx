@@ -360,22 +360,24 @@ export const Accordion = () => {
   const itemsOndData = Object.keys(DataGerman).length;
 
   return (
-    <section
-      className={`flex w-full flex-col items-center rounded-lg bg-white p-4 md:p-6 ${nunito.className}`}
-    >
-      {Data?.map((item, index) => (
-        <div key={item.title} className="w-full">
-          <AccordionItem
-            key={item.title}
-            open={index === indexopen}
-            title={item.title}
-            onClick={() => handleClick(index)}
-          >
-            {item.content}
-          </AccordionItem>
-          {itemsOndData - index < 2 ? null : <Line />}
-        </div>
-      ))}
+    <section className="lg:p-4 xl:p-0">
+      <div
+        className={`flex w-full flex-col items-center rounded-lg bg-white p-4 md:p-6 ${nunito.className}`}
+      >
+        {Data?.map((item, index) => (
+          <div key={item.title} className="w-full">
+            <AccordionItem
+              key={item.title}
+              open={index === indexopen}
+              title={item.title}
+              onClick={() => handleClick(index)}
+            >
+              {item.content}
+            </AccordionItem>
+            {itemsOndData - index < 2 ? null : <Line />}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

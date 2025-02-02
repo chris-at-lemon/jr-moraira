@@ -1,6 +1,6 @@
 const Gallery = () => {
   return (
-    <div className="px-4 md:px-0">
+    <div className="px-4 xl:px-0">
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         <div className="grid gap-4">
           <div>

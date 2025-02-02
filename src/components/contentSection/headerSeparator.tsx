@@ -16,7 +16,7 @@ const HeaderSeparator = ({ section, quotes }: Props) => {
 
   return (
     <div
-      className={`px-4 py-12 text-4xl md:px-0 md:py-16 ${cardo.className} flex items-center justify-center text-center text-blue-300`}
+      className={`px-4 py-12 text-4xl md:px-8 md:py-16 lg:px-0 ${cardo.className} flex items-center justify-center text-center text-blue-300`}
     >
       {quotes && <FontAwesomeIcon icon={faQuoteLeft} className="-mt-4 mr-4" />}
 
