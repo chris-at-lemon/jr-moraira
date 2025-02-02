@@ -15,7 +15,7 @@ import { Accordion } from "@/components/accordeon/accordion";
 export default function Home() {
   return (
     <>
-      <main className="bg-orange-50 bg-opacity-10 text-neutral-900">
+      <main className="text-neutral-900">
         <div className="grid h-screen min-h-[640px] grid-cols-1 gap-4 bg-orange-50 md:grid-cols-8">
           <div className="absolute left-0 top-0 col-span-8 h-screen min-h-[640px] w-full opacity-15">
             <Image
@@ -83,7 +83,7 @@ export default function Home() {
           <GoogleMap placeId={"ChIJZW_8E1oHnhIRNzYOw3AX8yE"} />
         </div>
 
-        <div className="bg-orange-900 bg-opacity-15 px-4 py-16 md:px-0">
+        <div className="px-4 py-16 md:px-0">
           <div className="container mx-auto">
             <Accordion />
           </div>
