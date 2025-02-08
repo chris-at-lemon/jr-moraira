@@ -22,7 +22,7 @@ const LocationText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faCalendar} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">03 Oktober 2024</div>
+            <div className="ml-4 mt-[1px]">03 Oktober 2025</div>
           </div>
 
           <div className="mt-2 flex items-center">
@@ -64,7 +64,7 @@ const LocationText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faCalendar} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">03 Octobre 2024</div>
+            <div className="ml-4 mt-[1px]">03 Octobre 2025</div>
           </div>
 
           <div className="mt-2 flex items-center">
@@ -105,7 +105,7 @@ const LocationText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faCalendar} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">03 October 2024</div>
+            <div className="ml-4 mt-[1px]">03 October 2025</div>
           </div>
 
           <div className="mt-2 flex items-center">

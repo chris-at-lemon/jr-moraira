@@ -15,7 +15,7 @@ const ContactFormWrapper = () => {
     <>
       <button
         type="submit"
-        className="fixed right-4 top-3 rounded bg-blue-500 px-2 py-1 text-xs font-bold text-white hover:bg-blue-700"
+        className="rounded bg-blue-500 px-2 py-1 text-xs font-bold text-white hover:bg-blue-700"
         onClick={() => setIsOpen(true)}
       >
         {language === "de" && "Anmeldung"}

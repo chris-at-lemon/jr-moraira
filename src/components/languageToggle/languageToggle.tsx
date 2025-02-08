@@ -6,7 +6,7 @@ const LanguageToggle = () => {
   const { language, handleLanguage } = useLanguageContext();
 
   return (
-    <div className="absolute left-4 top-4 flex space-x-4">
+    <div className="flex space-x-4">
       <button
         onClick={() => handleLanguage("de")}
         className={`text-sm ${

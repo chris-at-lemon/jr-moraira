@@ -114,7 +114,24 @@ export const Accordion = () => {
     },
     {
       title: "Wen spreche ich bezüglich der Hochzeitorganisation an? ",
-      content: "Schaun mer mal",
+      content: (
+        <>
+          Ihr könnt uns immer über Email erreichen:{" "}
+          <a
+            href="mailto:john.korter@gmail.com"
+            className="underline hover:no-underline"
+          >
+            John
+          </a>{" "}
+          oder{" "}
+          <a
+            href="mailto:reykja80@yahoo.de"
+            className="underline hover:no-underline"
+          >
+            Reykja
+          </a>{" "}
+        </>
+      ),
     },
     {
       title: "Wie kann ich meine Zusage oder Absage übermitteln? ",
@@ -220,7 +237,24 @@ export const Accordion = () => {
     },
     {
       title: "Who do I contact regarding wedding organization?",
-      content: "Schaun mer mal",
+      content: (
+        <>
+          You can always reach us by email:{" "}
+          <a
+            href="mailto:john.korter@gmail.com"
+            className="underline hover:no-underline"
+          >
+            John
+          </a>{" "}
+          oder{" "}
+          <a
+            href="mailto:reykja80@yahoo.de"
+            className="underline hover:no-underline"
+          >
+            Reykja
+          </a>{" "}
+        </>
+      ),
     },
     {
       title: "How can I communicate my acceptance or rejection?",
@@ -330,7 +364,28 @@ export const Accordion = () => {
     },
     {
       title: "Qui dois-je contacter concernant l'organisation du mariage?",
-      content: "Schaun mer mal",
+      content: (
+        <>
+          (
+          <>
+            Vous pouvez toujours nous joindre par email:{" "}
+            <a
+              href="mailto:john.korter@gmail.com"
+              className="underline hover:no-underline"
+            >
+              John
+            </a>{" "}
+            oder{" "}
+            <a
+              href="mailto:reykja80@yahoo.de"
+              className="underline hover:no-underline"
+            >
+              Reykja
+            </a>{" "}
+          </>
+          ),
+        </>
+      ),
     },
     {
       title: "Comment puis-je communiquer mon acceptation ou mon refus?",

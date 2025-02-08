@@ -1,9 +1,8 @@
 import Image from "next/image";
 
-import LanguageToggle from "@/components/languageToggle/languageToggle";
+import TopNav from "@/components/nav/topNav";
 import CountDown from "@/components/countdown/countdown";
 import GoogleMap from "@/components/googleMap/googlemap";
-import ContactFormWrapper from "@/components/forms/contactFormWrapper";
 import MainHeaders from "@/components/text/mainHeaders";
 import HeaderSeparator from "@/components/contentSection/headerSeparator";
 import ImagesAndTextWrapper from "@/components/contentSection/imagesAndTextWrapper";
@@ -15,6 +14,7 @@ import { Accordion } from "@/components/accordeon/accordion";
 export default function Home() {
   return (
     <>
+      <TopNav />
       <main className="text-neutral-900">
         <div className="grid h-screen min-h-[640px] grid-cols-1 gap-4 bg-orange-50 md:grid-cols-8">
           <div className="absolute left-0 top-0 col-span-8 h-screen min-h-[640px] w-full opacity-15">
@@ -89,8 +89,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <ContactFormWrapper />
-      <LanguageToggle />
     </>
   );
 }

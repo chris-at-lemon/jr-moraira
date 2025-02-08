@@ -8,9 +8,9 @@ const DateToCountTo = () => {
 
   return (
     <div className={`${nunito.className} text-xl font-medium text-neutral-600`}>
-      {language === "de" && "Am 03.10.2025"}
-      {language === "en" && "On 03/10/2025"}
-      {language === "fr" && "Le 03/10/2025"}
+      {language === "de" && "am 03.10.2025"}
+      {language === "en" && "on 03/10/2025"}
+      {language === "fr" && "le 03/10/2025"}
     </div>
   );
 };
