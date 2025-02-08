@@ -48,7 +48,11 @@ const Tagesablauf = () => {
             alt="wedding rings"
             style={{ maxHeight: "3rem" }}
           />
-          <div className="mt-4 text-xl font-semibold">16:00 Uhr</div>
+          <div className="mt-4 text-xl font-semibold">
+            {language === "de" && "16:00 Uhr"}
+            {language === "fr" && "16:00"}
+            {language === "en" && "4:00 PM"}
+          </div>
           <div>
             {language === "de" && "Trauung"}
             {language === "fr" && "Cérémonie"}
@@ -67,7 +71,11 @@ const Tagesablauf = () => {
             alt="champagne"
             style={{ maxHeight: "3rem" }}
           />
-          <div className="mt-4 text-xl font-semibold">16:30 Uhr</div>
+          <div className="mt-4 text-xl font-semibold">
+            {language === "de" && "16:30 Uhr"}
+            {language === "fr" && "16:30"}
+            {language === "en" && "4:30 PM"}
+          </div>
           <div>
             {language === "de" && "Sektempfang vor Ort"}
             {language === "fr" && "Réception sur place"}
@@ -90,7 +98,11 @@ const Tagesablauf = () => {
             alt="wedding rings"
             style={{ maxHeight: "3rem" }}
           />
-          <div className="mt-4 text-xl font-semibold">18:30 Uhr</div>
+          <div className="mt-4 text-xl font-semibold">
+            {language === "de" && "18:30 Uhr"}
+            {language === "fr" && "18:30"}
+            {language === "en" && "6:30 PM"}
+          </div>
           <div>
             {language === "de" && "Zeit zum Frischmachen"}
             {language === "fr" && "Temps pour se rafraîchir"}
@@ -104,7 +116,11 @@ const Tagesablauf = () => {
       >
         <div className="flex flex-grow basis-1/3 flex-col items-center justify-center p-4 text-center">
           <Image priority src={cake} alt="arch" style={{ maxHeight: "3rem" }} />
-          <div className="mt-4 text-xl font-semibold">19:30 Uhr</div>
+          <div className="mt-4 text-xl font-semibold">
+            {language === "de" && "19:30 Uhr"}
+            {language === "fr" && "19:30"}
+            {language === "en" && "7:30 PM"}
+          </div>
           <div>
             {language === "de" && "Eintreffen an der Location"}
             {language === "fr" && "Arrivée sur le lieu"}

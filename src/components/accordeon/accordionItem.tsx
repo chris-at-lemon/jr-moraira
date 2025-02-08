@@ -1,8 +1,10 @@
+import { JSX } from "react";
+
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type Props = {
-  title: string;
+  title: string | JSX.Element;
   children: React.ReactNode;
   open: boolean;
   onClick: () => void;

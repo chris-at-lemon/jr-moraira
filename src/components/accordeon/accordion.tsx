@@ -116,7 +116,7 @@ export const Accordion = () => {
       title: "Wen spreche ich bezüglich der Hochzeitorganisation an? ",
       content: (
         <>
-          Ihr könnt uns immer über Email erreichen:{" "}
+          Wir sind gerne per Email erreichbar:{" "}
           <a
             href="mailto:john.korter@gmail.com"
             className="underline hover:no-underline"
@@ -146,9 +146,9 @@ export const Accordion = () => {
       content: (
         <p>
           To celebrate the festive occasion, we have decided on the dress code{" "}
-          <strong>&quot;Summer elegant with dance shoes&quot;</strong>. We love
-          the summer flair and hope that you feel comfortable in light and
-          elegant outfits.{" "}
+          <strong>&quot;Summer elegant with your dancing shoes&quot;</strong>.
+          We love the summer flair and hope that you feel comfortable in light
+          and elegant outfits.{" "}
           <strong>
             For the evening, we would also recommend a jacket. Please check the
             weather report before departure!
@@ -231,7 +231,7 @@ export const Accordion = () => {
       ),
     },
     {
-      title: "What can we give you as a gift?",
+      title: "What about wedding gifts?",
       content:
         "We are delighted that you will be attending our wedding – your presence is the most beautiful gift you can give us!",
     },
@@ -239,14 +239,14 @@ export const Accordion = () => {
       title: "Who do I contact regarding wedding organization?",
       content: (
         <>
-          You can always reach us by email:{" "}
+          You can contact us under:{" "}
           <a
             href="mailto:john.korter@gmail.com"
             className="underline hover:no-underline"
           >
             John
           </a>{" "}
-          oder{" "}
+          or{" "}
           <a
             href="mailto:reykja80@yahoo.de"
             className="underline hover:no-underline"
@@ -257,7 +257,7 @@ export const Accordion = () => {
       ),
     },
     {
-      title: "How can I communicate my acceptance or rejection?",
+      title: "How do I accept the invitation or decline it?",
       content:
         "Please use the above-mentioned option for registration or cancellation. We would be delighted if you could give us feedback by 01.08.2025 at the latest.",
     },
@@ -366,29 +366,25 @@ export const Accordion = () => {
       title: "Qui dois-je contacter concernant l'organisation du mariage?",
       content: (
         <>
-          (
-          <>
-            Vous pouvez toujours nous joindre par email:{" "}
-            <a
-              href="mailto:john.korter@gmail.com"
-              className="underline hover:no-underline"
-            >
-              John
-            </a>{" "}
-            oder{" "}
-            <a
-              href="mailto:reykja80@yahoo.de"
-              className="underline hover:no-underline"
-            >
-              Reykja
-            </a>{" "}
-          </>
-          ),
+          Contactez-nous sous:{" "}
+          <a
+            href="mailto:john.korter@gmail.com"
+            className="underline hover:no-underline"
+          >
+            John
+          </a>{" "}
+          et/ou{" "}
+          <a
+            href="mailto:reykja80@yahoo.de"
+            className="underline hover:no-underline"
+          >
+            Reykja
+          </a>{" "}
         </>
       ),
     },
     {
-      title: "Comment puis-je communiquer mon acceptation ou mon refus?",
+      title: <>Comment puis-je répondre à l&apos;invitation?</>,
       content:
         "Veuillez utiliser l'option de réservation ou d'annulation mentionnée ci-dessus. Nous serions ravis si vous pouviez nous donner votre avis au plus tard le 01.08.2025.",
     },
@@ -420,9 +416,8 @@ export const Accordion = () => {
         className={`flex w-full flex-col items-center rounded-lg bg-white p-4 md:p-6 ${nunito.className}`}
       >
         {Data?.map((item, index) => (
-          <div key={item.title} className="w-full">
+          <div key={index} className="w-full">
             <AccordionItem
-              key={item.title}
               open={index === indexopen}
               title={item.title}
               onClick={() => handleClick(index)}

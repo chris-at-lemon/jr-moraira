@@ -33,8 +33,8 @@ const CraziesText = ({ language }: Props) => {
     return (
       <div className={`${nunito} text-neutral-600`}>
         <h3 className="text-xl font-bold">
-          &quot;Personne n&apos;est si fou qu&apos;il ne trouve un autre fou
-          encore plus fou pour le comprendre.&quot;
+          &quot;Un fou en trouve souvent un autre tout aussi fou pour le
+          comprendre&quot;
         </h3>
         <p className="mt-4">
           Et c&apos;est exactement ce que nous avons fait ! Après une
