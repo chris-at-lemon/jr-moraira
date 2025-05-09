@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <TopNav />
-      <main className="text-neutral-900">
+      <main className="bg-slate-50 text-neutral-900">
         <div className="grid h-screen min-h-[640px] grid-cols-1 gap-4 bg-orange-50 md:grid-cols-8">
           <div className="absolute left-0 top-0 col-span-8 h-screen min-h-[640px] w-full opacity-15">
             <Image
