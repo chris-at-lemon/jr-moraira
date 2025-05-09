@@ -28,7 +28,7 @@ const ContactFormWrapper = () => {
             onClick={() => setIsOpen(false)}
             className="absolute right-4 top-4"
           >
-            <FontAwesomeIcon icon={faTimes} />
+            <FontAwesomeIcon icon={faTimes} className="text-gray-900" />
           </button>
           <div className="mx-auto mt-16 max-w-lg p-4">
             <ContactForm setIsOpen={setIsOpen} />
