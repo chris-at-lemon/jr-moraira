@@ -52,7 +52,7 @@ const CountDown = () => {
               {language === "de" && "Tage"}
             </div>
           </div>
-          <div>:</div>
+          <div className="flex items-center">:</div>
           <div className="flex flex-col items-center">
             <div
               className={`${cardo.className} text-2xl font-bold text-blue-300 md:text-4xl`}
@@ -67,7 +67,7 @@ const CountDown = () => {
               {language === "de" && "Stunden"}
             </div>
           </div>
-          <div>:</div>
+          <div className="flex items-center">:</div>
 
           <div className="flex flex-col items-center">
             <div
@@ -83,7 +83,7 @@ const CountDown = () => {
               {language === "de" && "Minuten"}
             </div>
           </div>
-          <div>:</div>
+          <div className="flex items-center">:</div>
 
           <div className="flex flex-col items-center">
             <div
