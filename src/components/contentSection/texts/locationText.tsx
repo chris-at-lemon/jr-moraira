@@ -29,7 +29,7 @@ const LocationText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">Ab 19:30 Uhr</div>
+            <div className="ml-4 mt-[1px]">Ab 18:00 Uhr</div>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ const LocationText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">À partir de 19h30</div>
+            <div className="ml-4 mt-[1px]">À partir de 18h00</div>
           </div>
         </div>
 
@@ -112,7 +112,7 @@ const LocationText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">From 7:30 pm</div>
+            <div className="ml-4 mt-[1px]">From 6:00 pm</div>
           </div>
         </div>
 
