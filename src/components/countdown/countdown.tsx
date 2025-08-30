@@ -6,6 +6,7 @@ import { cardo, nunito } from "@/app/fonts";
 
 import Countdown from "react-countdown";
 import { calcTimeDelta } from "react-countdown";
+import Completionist from "@/components/countdown/completionist";
 
 interface Renderer {
   days: number;
@@ -15,20 +16,24 @@ interface Renderer {
   completed: boolean;
 }
 
-const Completionist = () => <span>You are good to go!</span>;
-
 const CountDown = () => {
   const { language } = useLanguageContext();
 
   const calculateTimeDelta = () => {
-    const timeDelta = calcTimeDelta("2025-10-03T14:00:00.000Z");
+    const timeDelta = calcTimeDelta("2025-10-03T13:00:00.000Z");
     return timeDelta;
   };
 
   const renderer = ({ days, hours, minutes, seconds, completed }: Renderer) => {
     if (completed) {
       // Render a completed state
-      return <Completionist />;
+      return (
+        <div className="flex justify-center space-x-4">
+          <div className="flex flex-col items-center">
+            <Completionist />
+          </div>
+        </div>
+      );
     } else {
       // Render a countdown
       return (

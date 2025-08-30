@@ -29,7 +29,7 @@ const TrauungText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">Ab 15:30 Uhr</div>
+            <div className="ml-4 mt-[1px]">Ab 14:00 Uhr</div>
           </div>
         </div>
 
@@ -70,7 +70,7 @@ const TrauungText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">À partir de 15h30</div>
+            <div className="ml-4 mt-[1px]">À partir de 14h00</div>
           </div>
         </div>
 
@@ -111,7 +111,7 @@ const TrauungText = ({ language }: Props) => {
             <div className="text-2xl">
               <FontAwesomeIcon icon={faClock} className="text-blue-400" />
             </div>
-            <div className="ml-4 mt-[1px]">From 3:30 pm</div>
+            <div className="ml-4 mt-[1px]">From 2:00 pm</div>
           </div>
         </div>
 

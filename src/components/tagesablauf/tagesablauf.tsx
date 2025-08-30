@@ -10,6 +10,7 @@ import arch from "../../../public/icons/arch.svg";
 import champagne from "../../../public/icons/champagne.svg";
 import weddingCar from "../../../public/icons/weddingCar.svg";
 import cake from "../../../public/icons/cake.svg";
+import dinner from "../../../public/icons/romantic-dinner.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
 
@@ -22,9 +23,9 @@ const Tagesablauf = () => {
         <div className="flex flex-grow basis-1/3 flex-col items-center justify-center px-4 text-center">
           <Image priority src={arch} alt="arch" style={{ maxHeight: "3rem" }} />
           <div className="mt-4 text-xl font-semibold">
-            {language === "de" && "15:30 Uhr"}
-            {language === "fr" && "15:30"}
-            {language === "en" && "3:30 PM"}
+            {language === "de" && "14:00 Uhr"}
+            {language === "fr" && "14h00"}
+            {language === "en" && "2:00 PM"}
           </div>
           <div>
             {language === "de" && "Ankunft"}
@@ -49,9 +50,9 @@ const Tagesablauf = () => {
             style={{ maxHeight: "3rem" }}
           />
           <div className="mt-4 text-xl font-semibold">
-            {language === "de" && "16:00 Uhr"}
-            {language === "fr" && "16:00"}
-            {language === "en" && "4:00 PM"}
+            {language === "de" && "14:30 Uhr"}
+            {language === "fr" && "14h30"}
+            {language === "en" && "2:30 PM"}
           </div>
           <div>
             {language === "de" && "Trauung"}
@@ -72,9 +73,9 @@ const Tagesablauf = () => {
             style={{ maxHeight: "3rem" }}
           />
           <div className="mt-4 text-xl font-semibold">
-            {language === "de" && "16:30 Uhr"}
-            {language === "fr" && "16:30"}
-            {language === "en" && "4:30 PM"}
+            {language === "de" && "15:15 Uhr"}
+            {language === "fr" && "15:15"}
+            {language === "en" && "3:15 PM"}
           </div>
           <div>
             {language === "de" && "Sektempfang vor Ort"}
@@ -99,14 +100,14 @@ const Tagesablauf = () => {
             style={{ maxHeight: "3rem" }}
           />
           <div className="mt-4 text-xl font-semibold">
-            {language === "de" && "18:30 Uhr"}
-            {language === "fr" && "18:30"}
-            {language === "en" && "6:30 PM"}
+            {language === "de" && "16:00 Uhr"}
+            {language === "fr" && "16:00"}
+            {language === "en" && "4:00 PM"}
           </div>
           <div>
-            {language === "de" && "Zeit zum Frischmachen"}
-            {language === "fr" && "Temps pour se rafraîchir"}
-            {language === "en" && "Time to freshen up"}
+            {language === "de" && "Bustransfer zum Oceana"}
+            {language === "fr" && "Transfert en bus vers l'Oceana"}
+            {language === "en" && "Bus transfer to Oceana"}
           </div>
         </div>
       </div>
@@ -117,14 +118,41 @@ const Tagesablauf = () => {
         <div className="flex flex-grow basis-1/3 flex-col items-center justify-center p-4 text-center">
           <Image priority src={cake} alt="arch" style={{ maxHeight: "3rem" }} />
           <div className="mt-4 text-xl font-semibold">
-            {language === "de" && "19:30 Uhr"}
-            {language === "fr" && "19:30"}
-            {language === "en" && "7:30 PM"}
+            {language === "de" && "16:45 Uhr"}
+            {language === "fr" && "16:45"}
+            {language === "en" && "4:45 PM"}
           </div>
           <div>
             {language === "de" && "Eintreffen an der Location"}
             {language === "fr" && "Arrivée sur le lieu"}
             {language === "en" && "Arrival at the location"}
+          </div>
+        </div>
+        <div className="basis-0.5 bg-blue-400"></div>
+        <div className="flex-grow basis-1/3"></div>
+      </div>
+
+      <div
+        className={`mt-4 flex items-stretch justify-center ${nunito.className}`}
+      >
+        <div className="flex flex-grow basis-1/3 flex-col items-center justify-center"></div>
+        <div className="basis-0.5 bg-blue-400"></div>
+        <div className="flex flex-grow basis-1/3 flex-col items-center justify-center px-4 text-center">
+          <Image
+            priority
+            src={dinner}
+            alt="wedding rings"
+            style={{ maxHeight: "3rem" }}
+          />
+          <div className="mt-4 text-xl font-semibold">
+            {language === "de" && "18:00 Uhr"}
+            {language === "fr" && "18:00"}
+            {language === "en" && "6:00 PM"}
+          </div>
+          <div>
+            {language === "de" && "Dinner"}
+            {language === "fr" && "Dîner"}
+            {language === "en" && "Dinner"}
           </div>
           <div className="mt-4 text-2xl">
             <FontAwesomeIcon
@@ -133,8 +161,6 @@ const Tagesablauf = () => {
             />
           </div>
         </div>
-        <div className="basis-0.5 bg-blue-400"></div>
-        <div className="flex-grow basis-1/3"></div>
       </div>
     </div>
   );

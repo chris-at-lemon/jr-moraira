@@ -138,6 +138,34 @@ export const Accordion = () => {
       content:
         "Bitte nutzt für die An – oder Abmeldung die oben genannte Möglichkeit. Wir würden uns freuen, wenn Du uns bis spätestens 01.08.2025 eine Rückmeldung gibst.",
     },
+    {
+      title:
+        "Wie komme ich nach der Trauung/Sektempfang an der Burg in Moraira zur Feierlocation Oceana und auch wieder zurück?",
+      content: (
+        <>
+          <p>
+            Nach der Trauung und dem Sektempfang steht ein Bustransfer ab der
+            Burg in Moraira ab ca. 16:00/16:15 Uhr zur Location Oceana bereit.
+          </p>
+          <p className="mt-2">
+            Wer lieber individuell zur Location Oceana fahren möchte, kann dies
+            selbstverständlich gerne tun. Parkplätze sind vor Ort vorhanden,
+            sodass ihr euer Fahrzeug bequem abstellen könnt.
+          </p>
+          <p className="mt-2">
+            Bitte plant ausreichend Zeit für die Fahrt ein, damit ihr entspannt
+            und pünktlich zur Feier kommt.
+          </p>
+          <p className="mt-2">
+            Für die Rückfahrt nach Moraira sind folgende Transfers organisiert:
+          </p>
+          <ul className="mt-2 list-disc">
+            <li className="ml-4">Erster Rücktransfer: ca. 23:00 Uhr</li>
+            <li className="ml-4">Letzter Rücktransfer: ca. 01:30 Uhr</li>
+          </ul>
+        </>
+      ),
+    },
   ];
 
   const DataEnglish = [
@@ -260,6 +288,36 @@ export const Accordion = () => {
       title: "How do I accept the invitation or decline it?",
       content:
         "Please use the above-mentioned option for registration or cancellation. We would be delighted if you could give us feedback by 01.08.2025 at the latest.",
+    },
+    {
+      title:
+        "How do I get from the wedding/reception at the castle in Moraira to the celebration location Oceana and back again?",
+      content: (
+        <>
+          <p>
+            After the wedding ceremony and champagne reception, a bus transfer
+            will be available from the castle in Moraira to the Oceana venue
+            from approx. 4:00 p.m./4:15 p.m.
+          </p>
+          <p className="mt-2">
+            If you prefer to drive to the Oceana location individually, you are
+            of course welcome to do so. Parking is available on site so that you
+            can conveniently park your vehicle.
+          </p>
+          <p className="mt-2">
+            Please allow enough time for the journey so that you arrive at the
+            celebration relaxed and on time.
+          </p>
+          <p className="mt-2">
+            The following transfers are organized for the return trip to
+            Moraira:
+          </p>
+          <ul className="mt-2 list-disc">
+            <li className="ml-4">First return transfer: approx. 11:00 p.m.</li>
+            <li className="ml-4">Last return transfer: approx. 1:30 a.m.</li>
+          </ul>
+        </>
+      ),
     },
   ];
 
@@ -387,6 +445,35 @@ export const Accordion = () => {
       title: <>Comment puis-je répondre à l&apos;invitation?</>,
       content:
         "Veuillez utiliser l'option de réservation ou d'annulation mentionnée ci-dessus. Nous serions ravis si vous pouviez nous donner votre avis au plus tard le 01.08.2025.",
+    },
+    {
+      title:
+        "Comment puis-je me rendre du mariage/réception au château de Moraira au lieu de la fête Oceana et revenir?",
+      content: (
+        <>
+          <p>
+            Après la cérémonie de mariage et la réception au champagne, un
+            transfert en bus sera disponible depuis le château de Moraira vers
+            le lieu Oceana à partir d&apos;environ 16h00/16h15.
+          </p>
+          <p className="mt-2">
+            Si vous préférez vous rendre individuellement au lieu Oceana, vous
+            êtes bien sûr le bienvenu. Un parking est disponible sur place afin
+            que vous puissiez garer votre véhicule en toute commodité.
+          </p>
+          <p className="mt-2">
+            Veuillez prévoir suffisamment de temps pour le trajet afin d&apos;
+            arriver à la célébration détendu et à l&apos;heure.
+          </p>
+          <p className="mt-2">
+            Les transferts suivants sont organisés pour le retour à Moraira:
+          </p>
+          <ul className="mt-2 list-disc">
+            <li className="ml-4">Premier transfert retour: environ 23h00</li>
+            <li className="ml-4">Dernier transfert retour: environ 1h30</li>
+          </ul>
+        </>
+      ),
     },
   ];
 

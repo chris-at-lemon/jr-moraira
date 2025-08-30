@@ -6,6 +6,27 @@ import { useLanguageContext } from "@/context/languageContext";
 const MainHeaders = () => {
   const { language } = useLanguageContext();
 
+  const targetDate = new Date("2025-10-03T13:00:00.000Z");
+  const now = new Date();
+
+  if (now >= targetDate)
+    return (
+      <>
+        <h2
+          className={`block text-xl font-medium md:text-4xl ${nunito.className} text-center text-neutral-600`}
+        >
+          {language === "en" && "We got married"}
+          {language === "fr" && "Nous nous sommes mariés"}
+          {language === "de" && "Wir haben geheiratet"}
+        </h2>
+        <h1
+          className={`mt-4 text-4xl font-bold md:mt-12 md:text-8xl ${cardo.className} text-center text-blue-300`}
+        >
+          Reykja &amp; John
+        </h1>
+      </>
+    );
+
   return (
     <>
       <h2
